@@ -68,6 +68,8 @@ NeuroRest/
 
 ## 📊 Sample Output
 
+**Data Exploration Section**
+
 ![Image](https://github.com/user-attachments/assets/18dafba7-2bf5-4fe3-8158-7f2c344af8a6)
 
 
@@ -77,11 +79,15 @@ NeuroRest/
 ![Image](https://github.com/user-attachments/assets/af894a90-4641-4da5-a61e-2885047880cd)
 
 
+**Model Training Results Section**
+
 ![Image](https://github.com/user-attachments/assets/802077e0-a5a1-43c1-9089-49cefa912b66)
 
 
 ![Image](https://github.com/user-attachments/assets/6e3eae5a-36ef-40fd-b647-24219fac57a4)
 
+
+ **Predictions Section**
 
 ![Image](https://github.com/user-attachments/assets/b3bccbb7-6ddc-4270-8478-855281fc26ab)
 
