@@ -64,7 +64,7 @@ This project uses two Kaggle datasets that provide information on **sleep qualit
 
 2. **Student Stress Factors Dataset**  
    - File: `Student Stress Factors.csv`  
-   - Source: [Kaggle - Student Stress Factors](https://www.kaggle.com/datasets/rxnach/student-stress-factors)  
+   - Source: [Kaggle - Student Stress Factors](https://www.kaggle.com/datasets/samyakb/student-stress-factors)  
    - Focuses on **stress levels among students** based on academic, lifestyle, and social factors.  
    - **Key Features:**  
      - Sleep Duration, Screen Time  
