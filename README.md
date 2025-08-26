@@ -116,5 +116,3 @@ streamlit run app.py
 ## 📜 License
 
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
-
-Do you want me to also **design a banner/logo image** (like a header graphic for NeuroRest) that you can put at the top of the README? That makes it even more eye-catching 👀
