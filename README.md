@@ -81,11 +81,13 @@ NeuroRest/
 
 ![Image](https://github.com/user-attachments/assets/802077e0-a5a1-43c1-9089-49cefa912b66)
 
+---
 
 **Model Training Results Section**
 
 ![Image](https://github.com/user-attachments/assets/6e3eae5a-36ef-40fd-b647-24219fac57a4)
 
+---
 
  **Predictions Section**
 
