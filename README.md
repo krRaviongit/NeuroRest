@@ -160,8 +160,8 @@ streamlit run app.py
 
 ## 👨‍💻 Contributors
 
-* **Kumar Ravi** – [GitHub](https://github.com/krRaviongit)
-* **Abinash Giri** – [GitHub](https://github.com/ABIN2005)
+* 🧑🏻‍💻 **Kumar Ravi** – [GitHub](https://github.com/krRaviongit)
+* 👨🏾‍💻 **Abinash Giri** – [GitHub](https://github.com/ABIN2005)
 
 ---
 
