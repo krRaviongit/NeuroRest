@@ -62,12 +62,24 @@ NeuroRest/
 
 ## ⚡ Demo
 
-👉 [Live Demo Link](#) *(if deployed on Streamlit / Vercel)*
-👉 [Project Presentation](#) *(if you have a PPT/video)*
+👉 [Live Demo Link](#)
 
 ---
 
 ## 📊 Sample Output
+
+![Image](https://github.com/user-attachments/assets/18dafba7-2bf5-4fe3-8158-7f2c344af8a6)
+
+![Image](https://github.com/user-attachments/assets/173c0384-7bde-4d3e-aec1-c486bb422883)
+
+![Image](https://github.com/user-attachments/assets/af894a90-4641-4da5-a61e-2885047880cd)
+
+![Image](https://github.com/user-attachments/assets/802077e0-a5a1-43c1-9089-49cefa912b66)
+
+![Image](https://github.com/user-attachments/assets/6e3eae5a-36ef-40fd-b647-24219fac57a4)
+
+![Image](https://github.com/user-attachments/assets/b3bccbb7-6ddc-4270-8478-855281fc26ab)
+
 
 <p align="center">
   <img src="https://github.com/your-username/NeuroRest/assets/sample-output-graph.png" width="500"/>
