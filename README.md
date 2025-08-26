@@ -46,6 +46,36 @@ The project leverages data-driven insights to help individuals **improve their w
 
 ---
 
+## 📊 Dataset  
+
+This project uses two Kaggle datasets that provide information on **sleep quality** and **stress factors**:  
+
+1. **Sleep Health and Lifestyle Dataset**  
+   - File: `Sleep_health_and_lifestyle_dataset.csv`  
+   - Source: [Kaggle - Sleep Health and Lifestyle Dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset)  
+   - Contains information about individuals' **sleep patterns and lifestyle habits**.  
+   - **Key Features:**  
+     - Age, Gender, Occupation  
+     - Sleep Duration (hours)  
+     - Quality of Sleep (scale 1–10)  
+     - Physical Activity Level  
+     - Stress Level (scale 1–10)  
+     - BMI Category, Blood Pressure, Heart Rate, Daily Steps  
+
+2. **Student Stress Factors Dataset**  
+   - File: `Student Stress Factors.csv`  
+   - Source: [Kaggle - Student Stress Factors](https://www.kaggle.com/datasets/rxnach/student-stress-factors)  
+   - Focuses on **stress levels among students** based on academic, lifestyle, and social factors.  
+   - **Key Features:**  
+     - Sleep Duration, Screen Time  
+     - Academic Pressure, Study Hours  
+     - Diet Quality, Physical Activity  
+     - Stress Levels (categorized)  
+
+🔗 These datasets are analyzed together to build the **NeuroRest: Stress and Sleep Predictor**, highlighting how **lifestyle, academic, and health factors influence stress and sleep quality**.  
+
+---
+
 ## 📂 Project Structure
 
 ```
