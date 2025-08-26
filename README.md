@@ -1,8 +1,6 @@
-# 🧠 NeuroRest
-
 ![NeuroRest Banner](https://github.com/user-attachments/assets/c163a264-de0c-47c3-9311-a94f8d9b3e04)
 
-
+# 🧠 NeuroRest
 > *AI-powered Sleep Quality & Stress Predictor*
 
 <p align="center">
