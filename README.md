@@ -170,6 +170,7 @@ streamlit run app.py
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
 
-                                                     <p align="center">Made with ❤️ by <b>Kumar Ravi</b></p>
+<p align="center">Made with ❤️ by <b>Kumar Ravi</b></p>
+
 
 
