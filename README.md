@@ -1,4 +1,4 @@
-# 🧠 NeuroRest: Stress and Sleep predictor 
+# 🧠 NeuroRest : Stress and Sleep predictor 💤
 
 > *AI-powered Sleep Quality & Stress Predictor*
 
