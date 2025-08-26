@@ -62,7 +62,7 @@ NeuroRest/
 
 ## ⚡ Demo
 
-👉 [Live Demo Link](#https://neurorest.streamlit.app/)
+👉 [Live Demo Link](https://neurorest.streamlit.app/)
 
 ---
 
