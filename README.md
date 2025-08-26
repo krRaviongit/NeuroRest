@@ -1,5 +1,5 @@
 ![Banner](https://github.com/user-attachments/assets/04f47400-1087-48b3-9679-4046b7df8cd3)
-
+---
   <h1 align="center">🧠NeuroRest</h1>
 > *AI-powered Sleep Quality & Stress Predictor*
 
