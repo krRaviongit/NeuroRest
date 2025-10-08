@@ -7,7 +7,8 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Active-success?style=flat-square" />
   <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" />
-  <img src="https://img.shields.io/github/stars/your-username/NeuroRest?style=social" />
+  <img src="https://img.shields.io/github/stars/krRaviongit/NeuroRest?style=social" />
+  <img src="https://img.shields.io/badge/Python-3.10%2B-yellow?style=flat-square" />
 </p>
 
 ---
@@ -99,6 +100,10 @@ NeuroRest/
 ---
 
 ## 📊 Sample Output
+| 🧠 Data Insights | 📈 Model Results | 🔮 Predictions |
+|:----------------:|:----------------:|:---------------:|
+| ![EDA](https://github.com/user-attachments/assets/18dafba7-2bf5-4fe3-8158-7f2c344af8a6) | ![Model](https://github.com/user-attachments/assets/6e3eae5a-36ef-40fd-b647-24219fac57a4) | ![Pred](https://github.com/user-attachments/assets/b3bccbb7-6ddc-4270-8478-855281fc26ab) |
+
 
 **Data Exploration Section**
 
