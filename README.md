@@ -99,6 +99,10 @@ NeuroRest/
 ---
 
 ## 📊 Sample Output
+| 🧠 Data Insights | 📈 Model Results | 🔮 Predictions |
+|:----------------:|:----------------:|:---------------:|
+| ![EDA](https://github.com/user-attachments/assets/18dafba7-2bf5-4fe3-8158-7f2c344af8a6) | ![Model](https://github.com/user-attachments/assets/6e3eae5a-36ef-40fd-b647-24219fac57a4) | ![Pred](https://github.com/user-attachments/assets/b3bccbb7-6ddc-4270-8478-855281fc26ab) |
+
 
 **Data Exploration Section**
 
