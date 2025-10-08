@@ -1,6 +1,6 @@
 import os
 import warnings
-from typing import Dict, List, Optional, Tuple, Union
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 import numpy as np
 import pandas as pd
@@ -17,7 +17,6 @@ from sklearn.metrics import accuracy_score, classification_report
 import streamlit as st
 
 
-st.set_page_config(page_title="NeuroRest: Stress and Sleep predictor", page_icon="💤", layout="wide")
 
 
 def build_theme_css(mode: str, accent: str) -> str:
@@ -76,8 +75,8 @@ def inject_css(theme_mode: str, accent: str) -> None:
 	st.markdown(build_theme_css(theme_mode, accent), unsafe_allow_html=True)
 
 
-EXPECTED_FILE_1 = "a2c5d1fc-1d3f-4d35-89cd-2503853499a0.csv"
-EXPECTED_FILE_2 = "ef52f6d1-05b3-476c-919c-23199775d31e.csv"
+EXPECTED_FILE_1 = "Sleep_Health_and_Lifestyle_Updated.csv"
+EXPECTED_FILE_2 = "Student_Stress_Factors_Updated.csv"
 EXPECTED_FILE_3 = "Student Stress Factors (2).csv"
 EXPECTED_FILE_4 = "Sleep_health_and_lifestyle_dataset.csv"
 
@@ -90,7 +89,7 @@ def find_dataset(path: str) -> Optional[str]:
 	return path if os.path.exists(path) else None
 
 
-def load_dataset(obj: Union[str, "UploadedFile"]) -> Optional[pd.DataFrame]:
+def load_dataset(obj: Union[str, Any]) -> Optional[pd.DataFrame]:
 	try:
 		if hasattr(obj, "read"):
 			return pd.read_csv(obj)
@@ -106,6 +105,9 @@ def standardize_columns(df: pd.DataFrame) -> pd.DataFrame:
 		.str.replace(" ", "_", regex=False)
 		.str.replace("-", "_", regex=False)
 		.str.replace("/", "_", regex=False)
+		.str.replace(r"[^a-z0-9_]", "", regex=True)  # drop punctuation/emojis
+		.str.replace(r"_+", "_", regex=True)         # collapse multiple underscores
+		.str.strip("_")
 	)
 	return df
 
@@ -116,10 +118,10 @@ def alias_columns(df: pd.DataFrame) -> pd.DataFrame:
 		"gender": ["gender", "sex"],
 		"occupation": ["occupation", "job", "profession", "work"],
 		"sleep_hours": ["sleep_hours", "sleep_duration", "sleep_time", "hours_of_sleep"],
-		"activity_level": ["activity_level", "physical_activity", "activity", "exercise_level"],
+		"activity_level": ["activity_level", "physical_activity", "physical_activity_level", "activity", "exercise_level"],
 		"screen_time": ["screen_time", "daily_screen_time", "screen_hours", "screentime"],
 		"steps": ["steps", "daily_steps", "step_count", "steps_count"],
-		"stress_level": ["stress_level", "stress", "perceived_stress", "stressscore", "stress_score"],
+		"stress_level": ["stress_level", "stress", "perceived_stress", "stressscore", "stress_score", "stress_category"],
 		"sleep_quality": ["sleep_quality", "sleep_score", "quality_of_sleep"],
 	}
 
@@ -287,7 +289,7 @@ st.sidebar.markdown("---")
 st.sidebar.markdown("<div class='nav-section'><h3>Navigation</h3></div>", unsafe_allow_html=True)
 
 # Use radio but style it to look like navigation cards
-mode = st.sidebar.radio("Choose a mode", ["📊 Data Exploration", "🧠 Model Training Results", "🔮 Predictions"], index=0, label_visibility="collapsed")
+mode = st.sidebar.radio("Choose a mode", ["📊 Data Exploration", "🧠 Model Training Results", "🔮 Predictions", "📘 Learn About Stress & Sleep"], index=0, label_visibility="collapsed")
 
 st.sidebar.markdown("---")
 
@@ -434,14 +436,7 @@ if mode == "📊 Data Exploration":
 		st.markdown("</div>", unsafe_allow_html=True)
 	with col2:
 		st.markdown("<div class='card'>", unsafe_allow_html=True)
-		st.markdown("**Stress levels vs screen time**")
-		if {"screen_time", STRESS_TARGET}.issubset(df_clean.columns):
-			fig, ax = plt.subplots(figsize=(7, 4))
-			sns.boxplot(data=df_clean, x=STRESS_TARGET, y="screen_time", ax=ax, palette=("rocket" if ui_theme=="Dark" else "Blues"))
-			ax.set_title("Screen time by stress level")
-			safe_plot(fig)
-		else:
-			st.info("Required columns not found: screen_time and stress_level")
+		st.markdown("No stress vs screen time chart shown.")
 		st.markdown("</div>", unsafe_allow_html=True)
 
 	col3, col4 = st.columns(2)
@@ -526,6 +521,35 @@ elif mode == "🔮 Predictions":
 		with coly:
 			st.markdown(f"<div class='result'><span class='label'>Stress level</span><span class='value'>{pred_stress}</span></div>", unsafe_allow_html=True)
 		st.markdown("</div>", unsafe_allow_html=True)
+
+		# Tailored tips
+		st.markdown("<div class='card'>", unsafe_allow_html=True)
+		st.markdown("**💡 Tips & Recommendations**")
+		if str(pred_stress).strip().lower().startswith("high"):
+			st.write("For High Stress: Try a 10-minute breathing exercise (box breathing 4-4-4-4).")
+		elif str(pred_stress).strip().lower().startswith("medium"):
+			st.write("For Medium Stress: Take a 5-minute walk or stretch break every hour.")
+		else:
+			st.write("For Low Stress: Keep a simple gratitude journal to maintain balance.")
+		if str(pred_sleep).strip().lower().startswith("poor"):
+			st.write("For Poor Sleep: Avoid screens 1 hour before bed and keep the room dark.")
+		else:
+			st.write("For Good Sleep: Maintain a consistent sleep schedule and morning light exposure.")
+		st.markdown("</div>", unsafe_allow_html=True)
+
+
+elif mode == "📘 Learn About Stress & Sleep":
+	st.markdown("<div class='section-title'>📘 Learn About Stress & Sleep</div>", unsafe_allow_html=True)
+	st.markdown("<div class='card'>", unsafe_allow_html=True)
+	st.markdown("**What increases stress?**")
+	st.write("• Excessive screen time • Heavy workload • Irregular sleep • Lack of exercise")
+	st.markdown("**What harms sleep?**")
+	st.write("• Caffeine late in the day • Screens before bed • Irregular schedule • Stress")
+	st.markdown("**Do's**")
+	st.write("• 7–9 hours sleep • 20–30 min daytime activity • Morning sunlight • Wind-down routine")
+	st.markdown("**Don'ts**")
+	st.write("• Big meals late • Blue light in last hour • Late caffeine • Work in bed")
+	st.markdown("</div>", unsafe_allow_html=True)
 
 
 st.markdown("<div class='small'>Built with Streamlit, pandas, scikit-learn, seaborn.</div>", unsafe_allow_html=True)
