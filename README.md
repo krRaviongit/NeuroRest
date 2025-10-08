@@ -7,7 +7,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Active-success?style=flat-square" />
   <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" />
-  <img src="https://img.shields.io/github/stars/your-username/NeuroRest?style=social" />
+  <img src="h<img src="https://img.shields.io/github/stars/krRaviongit/NeuroRest?style=social" />
   <img src="https://img.shields.io/badge/Python-3.10%2B-yellow?style=flat-square" />
 </p>
 
