@@ -168,7 +168,7 @@ streamlit run app.py
 
 * **Kumar Ravi** – [GitHub](https://github.com/krRaviongit)
 * **Abinash Giri** – [GitHub](https://github.com/ABIN2005)
-
+* **Jay Gupta**
 ---
 
 ## 📜 License
